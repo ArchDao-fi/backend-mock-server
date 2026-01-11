@@ -1,0 +1,27 @@
+{
+  "name": "backend-mock-server",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/ArchDao-fi/backend-mock-server#readme",
+  "bugs": {
+    "url": "https://github.com/ArchDao-fi/backend-mock-server/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArchDao-fi/backend-mock-server.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.8",
+    "@scalar/mock-server": "^0.8.9"
+  },
+  "devDependencies": {
+    "tsx": "^4.21.0"
+  }
+}
