@@ -16,10 +16,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/app.ts",
-    "test": "node --experimental-strip-types --test test/*.test.ts"
+    "test": "node --import tsx --test --test-global-setup=./test/setup.ts test/*.test.ts"
   },
   "dependencies": {
-    "@archdao/archdao-client": "^2.0.1",
+    "@archdao/archdao-client": "^2.1.5",
     "@hono/node-server": "^1.19.8",
     "@scalar/mock-server": "^0.8.9"
   },

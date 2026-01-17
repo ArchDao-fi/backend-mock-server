@@ -11,10 +11,9 @@ describe("Organization", () => {
   });
 
   it("GET /organization/{slug} - getOrganization", async () => {
-    const result = await publicClient.organization.getOrganization(
-      { slug: "example-dao" },
-      {}
-    );
+    const result = await publicClient.organization.getOrganization({
+      slug: "example-dao",
+    });
     assert.strictEqual(result.success, true);
     assert.ok(result.data?.id !== undefined);
   });

@@ -12,9 +12,15 @@ describe("Auth", () => {
   });
 
   it("POST /auth/login - login", async () => {
+    // First create a nonce (setup for this test)
+    const nonceResult = await publicClient.auth.createNonce({
+      address: "0x634B0A1dACf25Ef55224F25D82CA2de8069d804A",
+    });
+
+    // Then test login with that nonce
     const result = await publicClient.auth.login({
       address: "0x634B0A1dACf25Ef55224F25D82CA2de8069d804A",
-      nonce: 1736697600000,
+      nonce: nonceResult.data!.nonce,
       signature: "0xmocksignature",
     });
     assert.strictEqual(result.success, true);

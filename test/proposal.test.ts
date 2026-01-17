@@ -51,14 +51,14 @@ describe("Proposal", () => {
   });
 
   it("GET /proposal/{id}/stakes - listStakes", async () => {
-    const result = await publicClient.proposal.listStakes({ id: 1 }, {});
+    const result = await publicClient.proposal.listStakes({ id: 2 }, {});
     assert.strictEqual(result.success, true);
     assert.ok(Array.isArray(result.data));
     assert.ok(result.pagination !== undefined);
   });
 
   it("GET /proposal/{id}/trades - listTrades", async () => {
-    const result = await publicClient.proposal.listTrades({ id: 1 }, {});
+    const result = await publicClient.proposal.listTrades({ id: 2 }, {});
     assert.strictEqual(result.success, true);
     assert.ok(Array.isArray(result.data));
     assert.ok(result.pagination !== undefined);
